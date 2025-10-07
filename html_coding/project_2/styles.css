@@ -1,0 +1,134 @@
+body {
+    font-size: 22px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.main_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: white;
+    margin: 50px auto;
+    border-radius: 35px;
+    width: 550px;
+    padding: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 0px 20px;
+}
+
+.product_image {
+    width: 80%;
+    height: auto;
+    padding: 8px 18px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.product_detail {
+    margin: 15px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.structure, .features {
+    background-color: white;
+    color: white;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+    border-radius: 35px;
+}
+
+.structure h2, .features h2 {
+    color: black;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+.structure_list, .features_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.structure_list li, .features_list li {
+    display: inline-block;
+    background-color: orange;
+    display: inline-block;
+    color: white;
+    padding: 8px 18px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.buy_button {
+    width: 150px;
+    height: 35px;
+    margin: 15px;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px 18px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.buy_button:hover{
+    background-color: rgb(187, 134, 35);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 700px) {
+    
+    .main_div {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .product_detail {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .structure, .features {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p, .structure_list li, .features_list li {
+        font-size: 16px;
+    }
+
+    .buy_button {
+        width: 90%;
+        font-size: 18px;
+    }
+
+}
