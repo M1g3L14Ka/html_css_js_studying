@@ -79,6 +79,24 @@ h1 {
     background-color: rgb(96, 95, 95);
 }
 
+body.dark-theme {
+    background-color: #333;
+    color: white;
+}
+
+.dark-theme .main-div {
+    background-color: #444;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 0.3);
+}
+
+.dark-theme .link {
+    background-color: #555;
+}
+
+.dark-theme .back {
+    background-color: #555;
+}
+
 @media (max-width: 700px) {
     .main-div {
         width: 95%;
