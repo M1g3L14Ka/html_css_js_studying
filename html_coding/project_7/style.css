@@ -1,0 +1,237 @@
+body {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header header"
+    "main sidebar"
+    "footer footer";
+    box-shadow: 4px 8px 12px rgb(0 0 0 / 0.2);
+    padding: 5px 10px;
+    margin: 15px auto;
+    max-width: 1200px;
+    width: 95%;
+}
+
+.header, 
+.main,
+.sidebar,
+.footer {
+
+    box-shadow: 4px 8px 12px rgb(0 0 0 / 0.2);
+    border: 1px dashed black;
+    border-radius: 15px;
+    margin: 15px;
+    margin-bottom: 25px;
+    padding: 10px 10px;
+} 
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerImg {
+    width: 175px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 4px 6px 8px rgb(0 0 0 / 0.2);
+}
+
+.headerbtnContainer {
+    margin-bottom: 15px;
+}
+
+.headerBtnProjects, 
+.headerBtnLinks {
+    width: 150px;
+    height: 25px;
+    border: none;
+    border-radius: 15px;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.headerBtnProjects:hover, 
+.headerBtnLinks:hover  {
+    box-shadow: 4px 8px 12px rgb(0 0 0 / 0.2);
+    background-color: rgb(70, 70, 70);
+    transition: all 0.3s ease;
+    transform: translateY(-2px);
+}
+
+.headerBtnProjects, 
+.headerBtnLinks {
+    color: white;
+    text-decoration: none;
+}
+
+.main{
+    grid-area: main;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    border: 1px dashed black;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    padding: 10px 15px;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    box-shadow: 4px 12px 24px rgb(0 0 0 / 0.2);
+}
+
+.cardImg {
+    width: 75%;
+    object-fit: cover;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebarList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.todoList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.todoList li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid black;
+    box-shadow: 4px 8px 12px rgb(0 0 0 / 0.2);
+}
+
+.todoList li:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    box-shadow: 4px 12px 24px rgb(0 0 0 / 0.2);
+}
+
+.todoList .completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.sidebarTextInput {
+    width: 300px;
+    height: 35px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+}
+
+.sidebarAddBtn {
+    width: 150px;
+    height: 30px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.sidebarAddBtn:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    box-shadow: 4px 12px 24px rgb(0 0 0 / 0.2);
+    background-color: #3a3a3a;
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerImg {
+    position: absolute top;
+    width: 35px;
+    object-fit: cover;
+}
+
+.authorContainer {
+    width: 350px;
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+    }
+
+    .mainContainer {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 90%;
+        margin: 0;
+        border-radius: 0;
+        box-sizing: none;
+    }
+
+    .header,
+    .main,
+    .sidebar,
+    .footer {
+        margin: 10px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
