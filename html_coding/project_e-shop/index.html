@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header id="header" class="header">
+            <img class="headerImg" src="img/me.png" alt="Автор">
+            <div class="headerText">
+                <h1>E-shop Mk</h1>
+                <p>Цифровой магазин товаров</p>
+            </div>
+        </header>
+
+        <main class="main">
+            <section id="hero">
+                <h1>Предоставляем готовую продукцию и делаем под Ваш заказ</h1>
+                <div class="heroBtns">
+                    <button id="contactUsBtn" class="mainBtn">Связать с нами</button>
+                    <button id="linksBtn" class="mainBtn">Наши сети</button>
+                </div>
+            </section>
+
+            <section id="products">
+                <div class="productGrid"></div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <section class="filter">
+                <h4>Фильтр поиска</h4>
+                <div class="filterList">
+                    <button id="portblTexBtn" class="filterBtn">Портативная техника</button>
+                    <button id="maskFilterBtn" class="filterBtn">Косметика</button>
+                    <button id="furnuturFilterBtn" class="filterBtn">Мебель</button>
+                    <button id="orderFilterBtn" class="filterBtn">Ваш заказ</button>
+                    <button id="clearFilterBtn" class="filterBtn">Все товары</button>
+                </div>
+            </section>
+        </aside>
+
+        <footer class="footer">
+            <img class="footerImg" src="img/copyr.png" alt="Копирайт">
+            <div class="footerText">
+                <h1>Кацион М.А</h1>
+                <p>Все права защищены</p>
+            </div>
+            <nav class="footerNav">
+                <a href="#header">Вверх</a>
+                <a href="#products">Карточки товаров</a>
+            </nav>
+        </footer>
+    </div>
+
+    <div class="linksOverlay">
+        <div class="overlayLinksContent">
+            <div class="overlayLinksText">
+                <h1>Рады вас видеть!</h1>     
+                <button id="overlayLinksCloseBtn" class="overlayCloseBtn">&times;</button> 
+            </div>
+            <h4>Наши сети:</h4>
+            <button id="vkBtn" class="mainBtn">Vkontakte</button>
+            <button id="tgBtn" class="mainBtn">Telegram</button>
+            <button id="wtBtn" class="mainBtn">WhatSapp</button>
+            <button id="gitBtn" class="mainBtn">GitHub</button>
+        </div>
+    </div>
+
+    <div class="contactUsOverlay">
+        <div class="overlayContactUsContent">
+            <div class="overlayContactUsText">
+                <h1>Рады начать с вами сотрудничать!</h1>
+                <button id="overlayContactUsCloseBtn" class="overlayCloseBtn">&times;</button> 
+            </div>
+            <h4>Не забудьте указать имя и почту</h4>
+            <input class="contactUsInputText" type="text" placeholder="Ваше имя">
+            <input class="contactUsInputEmail" type="email" placeholder="Ваша почта">
+            <textarea class="contactUsInputMessage" placeholder="Текст заказа или просто сообщение"></textarea>
+            <button id="sendBtn" class="mainBtn">Отправить</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
