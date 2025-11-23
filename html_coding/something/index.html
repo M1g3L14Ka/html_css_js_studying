@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.Film</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>Mr. Film</h1>
+            <div class="headerFilmInput">
+                <label for="filmNameInput">Поиск фильма</label>
+                <input id="filmNameInput" type="text" placeholder="Название фильма">
+            </div>
+            <button id="headerProfileBtn">
+                <img class="headerProfileBtnImg" src="img/rubber-duck.png" alt="">
+            </button>
+        </header>
+
+        <main class="main">
+            <h3 class="filmCount"></h3>
+            <div class="filmsGrid"></div>
+        </main>
+
+        <aside class="sidebar">
+            <h3>Фильтр поиска</h3>
+            <div class="filterList"></div>
+        </aside>
+
+        <footer class="footer">
+            <div class="footerAuthor">
+                <h3>© foXy</h3>
+                <p>Все права защищены, 2025 </p>
+            </div>    
+            <div class="footerLinks"></div>
+        </footer>    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
