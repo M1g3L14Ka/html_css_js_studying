@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster slayer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="stats-area">
+            <div class="stats"><span class="stat" id="stat-gold">Золото: </span></div>
+            <div class="stats"><span class="stat" id="stat-kills">Врагов побеждено: </span></div>
+        </div>
+
+        <div class="main-arena">
+
+            <div class="info-area">
+                <span id="kill-info"></span>
+            </div>
+
+            <div class="monster-info-area">
+                <h2 id="monster-name">Гоблин</h2>
+            </div>
+
+            <div class="monster-img-area">
+                <img id="monster-img" src="img/enemy-goblin.jpg" alt="Противник">
+            </div>
+
+            <div class="hp-area">
+                <span id="current-hp">100 </span> / <span id="max-hp">100</span> Hp
+            </div>
+
+            <div class="control-btns-area">
+                <button class="control-btn" id="damage-btn">Ударить</button>
+                <button class="control-btn" id="next-mob-btn">Следующий враг</button>
+            </div>
+            <button class="control-btn" id="market-open-btn">Магазин</button>
+        </div>
+    </div>
+
+    <div class="market"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

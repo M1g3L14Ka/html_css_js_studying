@@ -1,0 +1,10 @@
+body { background: #1a1a1a; color: white; font-family: sans-serif; display: flex; justify-content: center; padding-top: 50px; }
+.container { width: 550px; border: 1px solid #444; padding: 20px; border-radius: 10px; background: #222; }
+h2 { text-align: center; color: #4CAF50; }
+.input-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+input { padding: 10px; background: #333; border: 1px solid #555; color: white; border-radius: 5px; }
+button { padding: 10px; background: #4CAF50; border: none; color: white; cursor: pointer; border-radius: 5px; font-weight: bold; }
+button:hover { background: #45a049; }
+ul { list-style: none; padding: 0; }
+li { background: #333; margin-bottom: 5px; padding: 10px; border-radius: 5px; border-left: 4px solid #4CAF50; display: flex; justify-content: space-between; }
+.phone { color: #aaa; font-size: 0.9em; }
