@@ -3,7 +3,7 @@ function HeaderPage({cart, favourites, setIsCartOpen, setIsFavouritesOpen, setSe
     return (
         <div className="header-info-div">
             <div className="header-img-div">
-                <img id="header-logo-img" src='./src/assets/logo.png' alt="Лого" />
+                <img id="header-logo-img" src='/img/logo.png' alt="Лого" />
             </div>
             <div className="search-input-div">
                 <input
@@ -21,7 +21,7 @@ function HeaderPage({cart, favourites, setIsCartOpen, setIsFavouritesOpen, setSe
                         onClick={() => setIsFavouritesOpen(true)}
                     >
                         <img id="header-favourites-img"
-                            src="./src/assets/whiteHeart.png"
+                            src="/img/whiteHeart.png"
                             alt="Избранное"
                         />
                     </button>
@@ -35,7 +35,7 @@ function HeaderPage({cart, favourites, setIsCartOpen, setIsFavouritesOpen, setSe
                         onClick={() => setIsCartOpen(true)}
                     >
                         <img id="header-cart-img"
-                            src="./src/assets/basket.png"
+                            src="/img/basket.png"
                             alt="Корзина"
                         />
                     </button>
@@ -49,7 +49,7 @@ function HeaderPage({cart, favourites, setIsCartOpen, setIsFavouritesOpen, setSe
                         onClick={() => setIsProfileOpen(true)}
                     >
                         <img id="header-profile-img"
-                            src="./src/assets/1.png"
+                            src="/img/prof.png"
                             alt="Профиль"
                         />
                     </button>

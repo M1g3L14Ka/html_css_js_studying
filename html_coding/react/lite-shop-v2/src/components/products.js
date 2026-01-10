@@ -3,7 +3,7 @@ export const products = [
     {
         id:1,
         name:'Уточка',
-        img:'./src/assets/duck.png',
+        img:'/img/duck.png',
         description:'Просто уточка',
         cost: 455,
         rating: 5.00,
@@ -12,7 +12,7 @@ export const products = [
     {
         id:2,
         name:'Уточка 2',
-        img:'./src/assets/duck.png',
+        img:'/img/duck.png',
         description:'И еще одна уточка',
         cost: 455,
         rating: 5.00,
@@ -21,7 +21,7 @@ export const products = [
     {
         id:3,
         name:'Уточка 3',
-        img:'./src/assets/duck.png',
+        img:'/img/duck.png',
         description:'И еще',
         cost: 455,
         rating: 5.00,
@@ -30,7 +30,7 @@ export const products = [
     {
         id:4,
         name:'Уточка 4',
-        img:'./src/assets/duck.png',
+        img:'/img/duck.png',
         cost: 455,
         rating: 5.00,
         description:'И еще',
@@ -39,7 +39,7 @@ export const products = [
     {
         id:5,
         name:'Уточка 5',
-        img:'./src/assets/duck.png',
+        img:'/img/duck.png',
         cost: 455,
         rating: 5.00,
         description:'И еще, еще',
@@ -48,7 +48,7 @@ export const products = [
     {
         id:6,
         name:'Уточка 6',
-        img:'./src/assets/duck.png',
+        img:'/img/duck.png',
         cost: 455,
         rating: 5.00,
         description:'У меня их много..',
@@ -57,7 +57,7 @@ export const products = [
     {
         id:7,
         name:'Уточка 7',
-        img:'./src/assets/duck.png',
+        img:'/img/duck.png',
         cost: 455,
         rating: 5.00,
         description:'ВообщетА это лисий сайт, тут много уточек',
@@ -66,7 +66,7 @@ export const products = [
     {
         id:8,
         name:'Уточка 8',
-        img:'./src/assets/duck.png',
+        img:'/img/duck.png',
         cost: 455,
         rating: 5.00,
         description:'...',
@@ -75,7 +75,7 @@ export const products = [
     {
         id:9,
         name:'Уточка 9',
-        img:'./src/assets/duck.png',
+        img:'/img/duck.png',
         cost: 455,
         rating: 5.00,
         description:'Я просто добавлю ее сюда',
@@ -84,7 +84,7 @@ export const products = [
     {
         id:10,
         name:'Уточка 10',
-        img:'./src/assets/duck.png',
+        img:'/img/duck.png',
         cost: 455,
         rating: 5.00,
         description:'Как дела? Как у вас погода :?',
@@ -93,7 +93,7 @@ export const products = [
     {
         id:11,
         name:'Уточка 11',
-        img:'./src/assets/duck.png',
+        img:'./img/duck.png',
         cost: 455,
         rating: 5.00,
         description:'Много уточек не бывает',
@@ -102,7 +102,7 @@ export const products = [
     {
         id:12,
         name:'Уточка 12',
-        img:'./src/assets/duck.png',
+        img:'/img/duck.png',
         cost: 455,
         rating: 5.00,
         description:'Да, утиная семья, что такого?',
