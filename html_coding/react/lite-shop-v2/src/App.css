@@ -1,0 +1,422 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Основные цвета лисьей палитры */
+    --fox-primary: rgb(220 120 40);     /* Основной рыжий - мех лисы */
+    --fox-secondary: rgb(180 80 20);    /* Тёмный рыжий - тени на мехе */
+    --fox-accent: rgb(255 180 50);      /* Светлый акцент - кончики ушей */
+    --fox-dark: rgb(60 40 30);          /* Тёмно-коричневый - земля, тени */
+    --fox-light: rgb(245 225 190);      /* Светлый песочный - живот лисы */
+    --fox-neutral: rgb(140 100 70);     /* Нейтральный коричневый */
+    
+    /* Дополнительные акценты */
+    --fox-amber: rgb(255 140 0);        /* Яркий янтарный */
+    --fox-rust: rgb(160 70 30);         /* Ржавый коричневый */
+    --fox-cream: rgb(255 240 210);      /* Кремовый для текста */
+    
+    /* Тени и градиенты */
+    --shadow-light: rgba(220 120 40 / 0.15);
+    --shadow-dark: rgba(60 40 30 / 0.3);
+}
+
+body {
+    background-color: rgb(40 40 40);
+    color: var(--fox-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-areas: 
+    "header header"
+    "main sidebar"
+    "footer footer";
+    padding: 20px;
+}
+
+.header,
+.main,
+.sidebar,
+.footer {
+    display: flex;
+    border: 1px solid;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 10px 15px;
+}
+
+.header {
+    grid-area: header;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+#header-search-input {
+    width: 450px;
+    height: 35px;
+    border: 1px solid var(--fox-accent);
+    background-color: rgb(40 40 40);
+    border-radius: 15px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    outline: none;
+    font-size: 18px;
+    color: var(--fox-light);
+}
+
+#header-search-input:focus {
+    border-color: var(--fox-amber)
+}
+
+.header-info-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.personal-info {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.favourites-div,
+.profile-div,
+.cart-div {
+    display: flex;
+    text-align: center;
+}
+
+#header-add-to-favourites-btn,
+#header-profile-btn,
+#header-cart-btn {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(40 40 40);
+    border: none;
+}
+
+#header-favourites-img,
+#header-profile-img,
+#header-cart-img {
+    width: 100%;
+    background-color: none;
+}
+
+#header-logo-img {
+    width: 350px;
+    object-fit: cover;
+}
+
+.main {
+    grid-area: main;
+    
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 5px;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.cards-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px 15px;
+    border: 1px dashed;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.cards-content p {
+    font-size: 18px;
+    max-height: 10px;
+    margin-bottom: 30px;
+}
+
+.cards-content:hover {
+    box-shadow: 0 0 10px var(--fox-accent);
+}
+
+.cards-content img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+#main-add-to-card-btn {
+    width: 200px;
+    height: 25px;
+    background-color: var(--fox-neutral);
+    border: none;
+    border-radius: 15px;
+    color: var(--fox-cream);
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+#main-add-to-card-btn:hover {
+    box-shadow: 0 0 10px var(--fox-neutral);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    backdrop-filter: blur(5px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    animation: fadeIn 0.3s ease;
+}
+
+
+.modal-content {
+    background-color: rgb(40, 40, 40);
+    width: 500px;
+    max-height: 80vh; 
+    border: 2px solid var(--fox-primary);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto; 
+}
+
+.modal-content h2 {
+    border-bottom: 1px dashed var(--fox-neutral);
+    padding-bottom: 30px;
+    margin-bottom: 5px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--fox-primary);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.favourites-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20 20 20 / 0.2);
+    border-radius: 15px;
+}
+
+.cards-content p {
+    margin-top: 10px;
+}
+
+.basket-modal-delete-item-btn {
+    width: 100px;
+    height: 25px;
+    border-radius: 15px;
+    color: var(--fox-cream);
+    background-color: var(--fox-neutral);
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.basket-modal-delete-item-btn:hover {
+    box-shadow: 0 0 5px var(--fox-cream);
+}
+
+.order-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    text-align: center;
+    height: 35px;
+    font-size: 16px;
+    margin: 5px auto;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--fox-amber);
+    transition: all 0.3s ease;
+    color: var(--fox-cream);
+}
+
+.order-btn:hover {
+    box-shadow: 0 0 5px var(--fox-accent);
+    transform: translateY(-0.5px);
+}
+
+#main-add-to-favourites-btn {
+    font-size: 18px;
+    background-color: none;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.sidebar {
+    grid-area: sidebar;
+    text-align: center;
+    flex-direction: column;
+}
+
+.sidebar-filter-btn {
+    width: 150px;
+    font-size: 16px;
+    height: 25px;
+    border: none;
+    border-radius: 15px;
+    color: var(--fox-cream);
+    background-color: var(--fox-neutral);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-filter-btn:hover {
+    box-shadow: 0 0 10px var(--fox-cream);
+}
+
+.footer {
+    grid-area: footer;
+    justify-content: space-around;
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 8px; 
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(30, 30, 30); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--fox-primary); 
+    border-radius: 10px; 
+    border: 3px solid transparent; /* Прозрачная рамка вокруг ползунка */
+    background-clip: content-box; /* Цвет заливается только внутри рамки */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--fox-accent);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--fox-primary) rgb(30, 30, 30);
+}
+
+@media (max-width: 550px) {
+
+    .app-container {
+        display: flex;       
+        flex-direction: column; 
+        height: auto;        
+    }
+
+        .header-info-div {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-img-div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .search-input-div {
+        width: 100%;
+        margin: 0; 
+    }
+
+    #header-search-input {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .personal-info {
+        width: 100%;
+        justify-content: center;
+        gap: 20px; 
+    }
+    
+
+    .header-basket-count, .header-favourite-count {
+        top: -45px; 
+        left: 45px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .text-input-div, #input-search-text {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 95%;
+        overflow-x: auto;
+        border-bottom: 1px solid var(--sidebar-text-color);
+    }
+    
+    .sidebar-filter {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    }
+}
