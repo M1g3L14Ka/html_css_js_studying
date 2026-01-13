@@ -28,7 +28,7 @@ function HeaderPage({ inputMovie, setInputMovie, searchMovie, setIsProfileOpen }
                     id="header-profile-btn"
                     onClick={() => setIsProfileOpen(true)}
                 > 
-                    <img className="btn-ico" src="./public/profileImg.png" alt="profile" />
+                    <img className="btn-ico" src="/profileImg.png" alt="profile" />
                 </button>
             </div>
         </div>
