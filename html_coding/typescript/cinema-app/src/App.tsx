@@ -2,38 +2,32 @@ import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import MovieDetails from './pages/MovieDetails'
-import ProfilePage from './pages/ProfilePage' // Не забудь создать/импортировать
+import ProfilePage from './pages/ProfilePage' 
 import type { IMovie } from './types'
 import './App.css'
 
 function App() {
 
-  // 1. ХОЛОДИЛЬНИК (Стейт) живет здесь, в коридоре!
   const [favourites, setFavourites] = useState<IMovie[]>(() => {
-    const saved = localStorage.getItem('movie-favs') // Исправили ключ
+    const saved = localStorage.getItem('movie-favs')
     return saved ? JSON.parse(saved) : []
   })
 
-  // 2. Сохранение
   useEffect(() => {
     localStorage.setItem('movie-favs', JSON.stringify(favourites))
   }, [favourites])
 
-  // 3. Функция Вкл/Выкл (Рубильник)
   function toggleFavourite(movie: IMovie) {
     const isExists = favourites.some(f => f.id === movie.id)
     
     if (isExists) {
-      // Удаляем
       setFavourites(prev => prev.filter(f => f.id !== movie.id))
     } else {
-      // Добавляем
       setFavourites(prev => [...prev, movie])
     }
   }
 
   return (
-    // Раздаем "еду" по комнатам через пропсы
     <Routes>
       <Route path="/" element={
         <HomePage 
